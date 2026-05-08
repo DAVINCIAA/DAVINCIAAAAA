@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50 overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .cinematic-glow {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+  }
+  
+  .soft-overlay {
+    background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.4) 100%);
+  }
+
+  .emotional-fade {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
+
+  .particles {
+    background-image: radial-gradient(circle, white 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: float 20s linear infinite;
+  }
+}
+
+@keyframes float {
+  from { background-position: 0 0; }
+  to { background-position: 500px 1000px; }
+}
+
+/* Character sprite filters */
+.character-glow {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
